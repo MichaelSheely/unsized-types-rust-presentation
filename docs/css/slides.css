@@ -1,0 +1,111 @@
+body {
+  max-height: 100vh;
+}
+/* run button on rust snippets */
+code.rust { position: relative; }
+a.test-arrow {
+  display: inline-block;
+  position: absolute;
+
+  background-color: #4e8bca;
+  color: #f5f5f5;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  top: 5px;
+  right: 5px;
+}
+
+/* Two-column layout */
+.red {
+  color: #A52B00;
+}
+.blue {
+  color: #01346B;
+}
+.white {
+  color: #FFFFFF;
+}
+.yellow {
+  color: #F49600;
+}
+.orange {
+  color: #F74C00;
+}
+.left-column {
+  width: 48%;
+  float: left;
+  max-height: 100%;
+}
+.right-column {
+  width: 48%;
+  float: right;
+  max-height: 100%;
+}
+
+.img-tiny img {
+  max-width: 200px;
+}
+.img-small img {
+  max-width: 300px;
+}
+.img-med img {
+  max-width: 400px;
+}
+.img-large img {
+  max-width: 500px;
+}
+
+.img-opaque img {
+  opacity: .5;
+}
+
+.big-idea {
+  font-size: 2em;
+  text-align: center;
+}
+
+.column-3 {
+  width: 31.333%;
+  padding: 1%;
+  float: left;
+}
+
+.footnote {
+  font-size: .7em;
+}
+
+/* Make code smaller */
+.small-code .remark-code {
+  font-size: 12px;
+}
+
+/* table! */
+table {
+  border: 1px solid #DFDFDF;
+  background-color: #F9F9F9;
+  width: 100%;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-family: Arial,"Bitstream Vera Sans",Helvetica,Verdana,sans-serif;
+  color: #333;
+}
+table td, table th {
+  border-top-color: white;
+  border-bottom: 1px solid #DFDFDF;
+  color: #555;
+}
+table th {
+  text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
+  font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+  font-weight: normal;
+  padding: 7px 7px 8px;
+  text-align: left;
+  line-height: 1.3em;
+  font-size: 22px;
+}
+table td {
+  font-size: 18px;
+  padding: 4px 7px 2px;
+  vertical-align: top;
+}
