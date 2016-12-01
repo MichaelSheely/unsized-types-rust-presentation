@@ -1,12 +1,14 @@
 # Site settings
 title: Unsized Types in Rust
-email: msheely@hmc.edu, jtwarley@gmail.com
+email: msheely@hmc.edu
+email2: jtwarely@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Website hosting the presentation on Rust Unsigned Types. <br>
   By Michael Sheely and Jackson Warely.
 baseurl: "" # the subpath of your site, e.g. /blog/
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username: MichaelSheely
+github_username2: jwarley
 
 # Build settings
 markdown: kramdown

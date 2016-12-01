@@ -4,5 +4,10 @@ title: Slides
 permalink: /slides/
 ---
 
-Here we have the slides for our presentation.
+# Presentation Slides
+
+Here we have the [slides][presentation] for our presentation.
+
+
+[presentation]: /presentation
 
