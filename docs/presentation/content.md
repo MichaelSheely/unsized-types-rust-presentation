@@ -21,14 +21,19 @@ class: left
 
 ## Static Size and the Stack
 
-![stack1](unsized-types-rust-presentation/docs/_images/stack1.png)
+![stack1]({{ site.url }}/assets/stack1.PNG)
 ---
 
 ## Static Size and the Stack
 
-![stack2](_images/stack2.PNG)
+![stack2]({{ site.url }}/assets/stack2.PNG)
 
-Easy for compiler to do arithmatic before hand and know when and how to destroy things.
+---
+## Static Size and the Stack
+
+![stack3]({{ site.url }}/assets/stack3.PNG)
+
+[](Easy for compiler to do arithmatic before hand and know when and how to destroy things.)
 
 ---
 
