@@ -21,8 +21,7 @@ class: left
 
 ## Static Size and the Stack
 
-![stack1](_images/stack1.PNG)
-
+![stack1](unsized-types-rust-presentation/docs/_images/stack1.png)
 ---
 
 ## Static Size and the Stack
