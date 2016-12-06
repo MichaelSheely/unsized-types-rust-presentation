@@ -19,10 +19,17 @@ Harvey Mudd College: Memory Safety in Rust
 layout: false
 class: left
 
-## The Stack Pointer (Better name?)
+## Static Size and the Stack
 
-Talk about why things have static size (easy for compiler to do arithmatic before hand and know
-when/how to destroy things).
+![stack1](_images/stack1.PNG)
+
+---
+
+## Static Size and the Stack
+
+![stack2](_images/stack2.PNG)
+
+Easy for compiler to do arithmatic before hand and know when and how to destroy things.
 
 ---
 
@@ -52,54 +59,70 @@ struct Composite {
 
 ## Zero Sized Types
 
+<br>
 Say we have a `Map<Key, Value>` already implemented.
 
+<br>
 And you want to implement a `Set<Key>`.
 
 ---
 
 ## Zero Sized Types
 
+<br>
 Say we have a `Map<Key, Value>` already implemented.
 
+<br>
 And you want to implement a `Set<Key>`.
 
+<br>
 As a `Map<Key, SmallUselessValue>`?
 
 ---
 
 ## Zero Sized Types
 
+<br>
 Say we have a `Map<Key, Value>` already implemented.
 
+<br>
 And you want to implement a `Set<Key>`.
 
+<br>
 As a `Map<Key, SmallUselessValue>`?
 
+<br>
 Instead, consider `Map<Key, ()>`!
 
 ---
 
 ## Dynamically Sized Types
 
+<br>
 Some questions to ponder.  In Rust:
 
+<br>
  * What's the size of a `Vec<T>`?
 ---
 
 ## Dynamically Sized Types
 
+<br>
 Some questions to ponder.  In Rust:
 
+<br>
  * What's the size of a `Vec<T>`?
+<br><br>
  * What's the size of `&[T]`?
 
 ---
 
 ## Dynamically Sized Types
 
+<br>
 Some questions to ponder.  In Rust:
 
+<br>
  * What's the size of a `Vec<T>`?
  <br><br>
  * What's the size of `&[T]`?
@@ -110,24 +133,35 @@ Some questions to ponder.  In Rust:
 
 ## Dynamically Sized Types
 
+<br>
  Thin Pointer: A one word pointer which contains a memory address.
 
  Fat Pointer: A multiword structure which *also* contains extra data about the instance (e.g. size).
 
+---
+
+## Dynamically Sized Types
+
+<br>
+ Thin Pointer: A one word pointer which contains a memory address.
+
+ Fat Pointer: A multiword structure which *also* contains extra data about the instance (e.g. size).
+
+<br>
  * Can't manipulate an unsized type, need to access them behind a pointer.
- <br>
+
  * Any interactions with unsized types will occur through a Fat Pointer.
- <br>
+
  * How do we interact with these DSTs?
 
 ---
+
 
 ## Dynamically Sized Types
 
 Interacting with Thin/Fat pointers and arrays.
 
 ```rust
-#![allow(dead_code)]
 struct Rc<T: ?Sized> {
     ptr: *mut RcData<T>,
 }
@@ -140,7 +174,6 @@ struct Rc<T: ?Sized> {
 Interacting with Thin/Fat pointers and arrays.
 
 ```rust
-#![allow(dead_code)]
 struct Rc<T: ?Sized> {
     ptr: *mut RcData<T>,
 }
@@ -158,7 +191,6 @@ struct RcData<T: ?Sized> {
 Interacting with Thin/Fat pointers and arrays.
 
 ```rust
-#![allow(dead_code)]
 struct Rc<T: ?Sized> {
     ptr: *mut RcData<T>,
 }
@@ -186,6 +218,7 @@ fn main() {
 
 ### Polymorphism and Traits
 
+<br>
 Rust also makes use of unsized types to represent "Trait Objcects".
 
 ---
@@ -194,8 +227,10 @@ Rust also makes use of unsized types to represent "Trait Objcects".
 
 ### Polymorphism and Traits
 
+<br>
 Rust also makes use of unsized types to represent "Trait Objcects".
 
+<br>
 We can refer to `T: Foo`, without the compiler knowing the type of `T`!
 
 ---
